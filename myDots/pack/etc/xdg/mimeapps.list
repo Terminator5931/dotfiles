@@ -1,0 +1,54 @@
+[Default Applications]
+
+# Web-related → Firefox
+text/html=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/xml=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/ftp=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+
+# Markdown files → Obsidian
+text/markdown=obsidian.desktop
+application/x-markdown=obsidian.desktop
+
+# PDFs → Zathura
+application/pdf=org.pwmt.zathura.desktop
+application/x-pdf=org.pwmt.zathura.desktop
+application/x-bzpdf=org.pwmt.zathura.desktop
+application/x-gzpdf=org.pwmt.zathura.desktop
+
+# Media → VLC
+audio/mpeg=mpv.desktop
+audio/mp4=mpv.desktop
+audio/x-wav=mpv.desktop
+audio/x-flac=mpv.desktop
+audio/ogg=mpv.desktop
+video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
+video/webm=mpv.desktop
+video/x-msvideo=mpv.desktop
+video/x-ms-wmv=mpv.desktop
+video/mpeg=mpv.desktop
+video/ogg=mpv.desktop
+video/x-flv=mpv.desktop
+
+# Images → sxiv
+image/jpeg=nsxiv.desktop
+image/png=nsxiv.desktop
+image/gif=nsxiv.desktop
+image/bmp=nsxiv.desktop
+image/webp=nsxiv.desktop
+image/tiff=nsxiv.desktop
+image/x-xbitmap=nsxiv.desktop
+image/x-xpixmap=nsxiv.desktop
+image/x-portable-pixmap=nsxiv.desktop
+
+# Custom Text files
+inode/x-empty=nvim.desktop

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="GtkMenu" id="menu">
+        <child>
+            <object class="GtkMenuItem" id="firefox">
+                <property name="label">Firefox</property>
+            </object>
+        </child>
+        <child>
+            <object class="GtkMenuItem" id="foot">
+                <property name="label">Foot</property>
+            </object>
+        </child>
+        <child>
+            <object class="GtkMenuItem" id="obsidian">
+                <property name="label">Obsidian</property>
+            </object>
+        </child>
+        <child>
+            <object class="GtkSeparatorMenuItem" id="delimiter1" />
+        </child>
+        <child>
+            <object class="GtkMenuItem" id="yazi">
+                <property name="label">Yazi</property>
+            </object>
+        </child>
+    </object>
+</interface>

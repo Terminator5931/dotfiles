@@ -1,0 +1,9 @@
+{
+  "baseFontSize": 24,
+  "interfaceFontFamily": "",
+  "textFontFamily": "JetBrainsMono Nerd Font Mono",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "no_blink"
+  ]
+}

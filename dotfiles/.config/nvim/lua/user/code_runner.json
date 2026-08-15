@@ -1,0 +1,8 @@
+{
+  "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+  "python": "python3 -u",
+  "typescript": "deno run",
+  "rust": "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
+  "cpp": "cd $dir && mkdir -p bin && clang++ -std=c++17 -O0 -fno-rtti -fno-exceptions -pipe -Wfatal-errors -fno-stack-protector -fno-asynchronous-unwind-tables -fomit-frame-pointer -DNDEBUG -include /home/terminator/cppProjects/includes/clang_dsa.h -I/home/terminator/cppProjects/includes $fileName -o bin/$fileNameWithoutExt && ./bin/$fileNameWithoutExt",
+  "html": "cd $dir && live-server -q --entry-file=$fileName"
+}

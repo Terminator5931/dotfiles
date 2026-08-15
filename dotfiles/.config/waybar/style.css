@@ -1,0 +1,95 @@
+* {
+  font-family: monospace;
+  font-size: 12px;
+  color: #eceff4;
+}
+
+window#waybar {
+  background-color: rgba(30, 30, 30, 0.9);
+  border-bottom: 1px solid #3b4252;
+}
+
+/* Workspaces */
+#workspaces button {
+  padding: 0 6px;
+  color: #d8dee9;
+  border: none;
+  background: transparent;
+}
+
+#workspaces button.focused {
+  color: #88c0d0;
+  border: none;
+  /* border-bottom: 2px solid #88c0d0; */
+}
+
+#workspaces button.urgent {
+  color: #bf616a;
+}
+
+/* Modules */
+#clock,
+#battery,
+#wireplumber,
+#network,
+#tray {
+  padding: 0 8px;
+}
+
+/* Battery */
+#battery.critical {
+  color: #bf616a;
+}
+
+/* Tooltip styling */
+tooltip {
+  background-color: #2e3440;
+  color: #eceff4;
+  border-radius: 3px;
+  padding: 4px 6px;
+}
+
+/* #custom-obsidian { */
+/*   background-image: url("/opt/obsidian/usr/share/icons/hicolor/16x16/apps/obsidian.png"); */
+/*   background-size: contain; */
+/*   background-repeat: no-repeat; */
+/*   background-position: center; */
+/*   min-width: 16px; */
+/*   min-height: 16px; */
+/*   margin-right: 10px; */
+/* } */
+
+menu {
+  border-radius: 15px;
+  background: #161320;
+  color: #b5e8e0;
+}
+
+menuitem {
+  border-radius: 15px;
+}
+
+/* menu { */
+/*   border-radius: 10px; */
+/*   background: #161320; */
+/*   padding: 6px; */
+/* } */
+/**/
+/* menuitem { */
+/*   padding: 4px 12px; */
+/* } */
+/**/
+/* menuitem label { */
+/*   color: #b5e8e0; */
+/* } */
+/**/
+/* menuitem:hover { */
+/*   background: #302d41; */
+/*   border-radius: 8px; */
+/* } */
+/**/
+/* separator { */
+/*   background: #444; */
+/*   min-height: 1px; */
+/*   margin: 4px 6px; */
+/* } */

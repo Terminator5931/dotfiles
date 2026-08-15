@@ -1,0 +1,3 @@
+# ~/.config/nsxiv/config
+delete = mv %f ~/.local/share/Trash/files/
+confirm_delete = true

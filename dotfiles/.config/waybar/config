@@ -1,0 +1,80 @@
+{
+  "layer": "top",
+    "position": "bottom",
+    "height": 26,
+    "spacing": 5,
+
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/dock", "wireplumber", "battery"],
+
+    "clock": {
+      "format": "Week {:%V %d %b %y %a | %I:%M %p}",
+      "tooltip" : false,
+      "interval": 60
+    },
+
+    "wireplumber": {
+      "format": "  {volume}%",
+      "max-volume": 100,
+      "scroll-step": 5
+    },
+
+    "battery": {
+      "bat": "BAT0",
+      "interval": 60,
+      "format": "{icon}  {capacity}%",
+      "format-icons": ["", "", "", "", ""],
+      "tooltip" : false
+    },
+
+    "network": {
+      "format-ethernet": "",
+      "format-wifi": "{icon}",
+      "format-disconnected": "",
+      "format-icons": [""],
+      "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+      "tooltip-format-ethernet": "{ifname}",
+      "tooltip-format-disconnected": "Disconnected"
+    },
+
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10,
+      "icons": {
+        "obsidian": "obsidian",
+      }
+    },
+
+    "custom/obsidian": {
+      "id": "custom-obsidian",
+      "format": " ",
+      "tooltip": false,
+      "on-click": "gtk-launch obsidian > /dev/null 2>&1"
+    },
+
+    "custom/power": {
+      "format" : "⏻ ",
+      "tooltip": false,
+      "menu": "on-click",
+      "menu-file": "~/.config/waybar/power_menu.xml",
+      "menu-actions": {
+        "shutdown": "shutdown",
+        "reboot": "reboot",
+        "suspend": "systemctl suspend",
+        "hibernate": "systemctl hibernate",
+      },
+    },
+    "custom/dock": {
+      "format" : " ",
+      "tooltip": false,
+      "menu": "on-click-right",
+      "menu-file": "~/dotfiles/.config/waybar/menu.xml",
+      "menu-actions": {
+        "obsidian": "gtk-launch obsidian",
+        "yazi": "foot -a yazi -e zsh -c \"XDG_RUNTIME_DIR=/run/user/$(id -u) FZF_DEFAULT_OPTS='--bind ctrl-j:accept,ctrl-y:accept' yazi\" 2>/dev/null &",
+        "firefox": "firefox 2>/dev/null &",
+        "foot": "foot 2>/dev/null &",
+      },
+    },
+}

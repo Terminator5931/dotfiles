@@ -1,0 +1,10 @@
+BasedOnStyle: Google
+IndentWidth: 2
+# ColumnLimit: 100
+ColumnLimit: 80
+SortIncludes: true
+SpacesBeforeTrailingComments: 2
+Cpp11BracedListStyle: true
+PointerAlignment: Left
+BreakBeforeBraces: Attach
+AlwaysBreakTemplateDeclarations: Yes

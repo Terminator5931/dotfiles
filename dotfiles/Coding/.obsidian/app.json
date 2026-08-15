@@ -1,0 +1,12 @@
+{
+  "tabSize": 2,
+  "promptDelete": false,
+  "vimMode": true,
+  "spellcheck": false,
+  "readableLineLength": false,
+  "showLineNumber": true,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "+",
+  "trashOption": "local"
+}

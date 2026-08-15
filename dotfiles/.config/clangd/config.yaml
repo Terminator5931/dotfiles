@@ -1,0 +1,9 @@
+CompileFlags:
+  Add:
+    - -std=c++17
+    - "-xc++"
+    - -stdlib=libstdc++
+    - -I/home/terminator/.local/includes
+    - -include
+    - /home/terminator/.local/includes/clang_dsa.h
+    - -DLOCAL

@@ -1,0 +1,22 @@
+{
+  "editor:delete-paragraph": [],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "B"
+    }
+  ],
+  "workspace:close-window": [],
+  "workspace:close": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "W"
+    }
+  ]
+}
