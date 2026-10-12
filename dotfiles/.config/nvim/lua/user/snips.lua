@@ -31,6 +31,19 @@ ls.add_snippets('cpp', {
     'cpp',
     fmt(
       [[
+//{{{{{{
+// clang-format off
+#ifdef LOCAL
+#include "/home/terminator/.local/includes/clang_dsa.h"
+#include "/home/terminator/.local/includes/debug_utils.h"
+#else
+#include <bits/stdc++.h>
+#define Fast_IO                     \
+  ios_base::sync_with_stdio(false); \
+  cin.tie(NULL);                    \
+  cout.tie(NULL);
+#define print(...) ;
+#endif
 using namespace std;
 typedef vector<int> vi;
 typedef pair<int, int> pi;
@@ -39,27 +52,13 @@ typedef pair<int, int> pi;
 #define S second
 #define MP make_pair
 #define PB push_back
-#define REP(i, a, b) for (int i = a; i <= b; i++)
-#define RREP(i, a, b) for (int i = a; i >= b; i--)
-//{{{{{{
-#ifdef LOCAL
-#include "includes/debug_utils.h"
-#include "includes/clang_dsa.h"
-#else
-#include <bits/stdc++.h>
-#define Fast_IO                                                                \
-  ios_base::sync_with_stdio(false);                                            \
-  cin.tie(NULL);                                                               \
-  cout.tie(NULL);
-#define debug(...) ;
-#define dbgv_range(...) ;
-#endif
-//}}}}}}
+#define REP(i,a,b) for(int i=a;i<b;i++)
+#define RREP(i,a,b) for(int i=a;i>=b;i--)
 int main() {{
-  //{{{{{{
 #ifndef LOCAL
   Fast_IO;
 #endif
+  // clang-format on
   //}}}}}}
 
   {}
@@ -151,10 +150,10 @@ void operator delete[](void* ptr) {{}} //}}}}}}
     )
   ),
   s(
-    'db',
+    'pr',
     fmt(
       [[
-debug({});
+print({});
 {}
 ]],
       {

@@ -73,7 +73,7 @@
       "menu-actions": {
         "obsidian": "gtk-launch obsidian",
         "yazi": "foot -a yazi -e zsh -c \"XDG_RUNTIME_DIR=/run/user/$(id -u) FZF_DEFAULT_OPTS='--bind ctrl-j:accept,ctrl-y:accept' yazi\" 2>/dev/null &",
-        "firefox": "firefox 2>/dev/null &",
+        "librewolf": "librewolf 2>/dev/null &",
         "foot": "foot 2>/dev/null &",
       },
     },
