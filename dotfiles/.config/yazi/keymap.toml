@@ -68,9 +68,9 @@ keymap = [
 	{ on = "p",         run = "paste",                       desc = "Paste yanked files" },
 	{ on = "P",         run = "paste --force",               desc = "Paste yanked files (overwrite if the destination exists)" },
 	{ on = "-",         run = "link",                        desc = "Symlink the absolute path of yanked files" },
-{ on = "_",         run = "link --relative",             desc = "Symlink the relative path of yanked files" },
-{ on = [ "<C-g>", "h" ],     run = "hardlink --follow",                    desc = "Hardlink yanked files" },
-{ on = "Y",         run = "unyank",                      desc = "Cancel the yank status" },
+	{ on = "_",         run = "link --relative",             desc = "Symlink the relative path of yanked files" },
+	{ on = "<C-->",     run = "hardlink",                    desc = "Hardlink yanked files" },
+	{ on = "Y",         run = "unyank",                      desc = "Cancel the yank status" },
 	{ on = "X",         run = "unyank",                      desc = "Cancel the yank status" },
 	{ on = "d",         run = "remove",                      desc = "Trash selected files" },
 	{ on = "D",         run = "remove --permanently",        desc = "Permanently delete selected files" },
@@ -229,6 +229,7 @@ keymap = [
 keymap = [
 	{ on = "<C-c>",   run = "close",          desc = "Cancel input" },
 	{ on = "<Enter>", run = "close --submit", desc = "Submit input" },
+	{ on = "<C-j>",   run = "close --submit", desc = "Submit the confirm" },
 	{ on = "<Esc>",   run = "escape",         desc = "Back to normal mode, or cancel input" },
 	{ on = "<C-[>",   run = "escape",         desc = "Back to normal mode, or cancel input" },
 
@@ -317,7 +318,7 @@ keymap = [
 	{ on = "<Esc>",   run = "close",          desc = "Cancel the confirm" },
 	{ on = "<C-[>",   run = "close",          desc = "Cancel the confirm" },
 	{ on = "<C-c>",   run = "close",          desc = "Cancel the confirm" },
-	{ on = "<C-j>", run = "close --submit", desc = "Submit the confirm" },
+	{ on = "<C-j>",   run = "close --submit", desc = "Submit the confirm" },
 	{ on = "<Enter>", run = "close --submit", desc = "Submit the confirm" },
 
 	{ on = "n", run = "close",          desc = "Cancel the confirm" },
