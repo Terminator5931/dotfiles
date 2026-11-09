@@ -52,7 +52,7 @@ vim.keymap.set('n', '<localleader>r', function()
     -- local cmd = './' .. file_without_ext
     vim.cmd 'split'
     vim.cmd 'resize 12'
-    vim.cmd('terminal zsh -c ' .. vim.fn.shellescape(cmd))
+    vim.cmd('terminal sh -c ' .. vim.fn.shellescape(cmd))
     vim.cmd 'startinsert'
   else
     vim.cmd 'RunCppFile'

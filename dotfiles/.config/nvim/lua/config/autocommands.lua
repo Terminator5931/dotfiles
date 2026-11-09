@@ -32,12 +32,12 @@ vim.api.nvim_create_user_command('RunCppFile', function()
     :gsub(vim.pesc '$filePath', vim.fn.expand '%:p')
     :gsub(vim.pesc '$dir', vim.fn.expand '%:p:h')
   if vim.bo.filetype == 'html' then
-    vim.fn.jobstart({ 'zsh', '-c', cmd }, { detach = true })
+    vim.fn.jobstart({ 'sh', '-c', cmd }, { detach = true })
     return
   end
   vim.cmd 'split'
   vim.cmd 'resize 12'
-  vim.cmd('terminal zsh -c ' .. vim.fn.shellescape(cmd))
+  vim.cmd('terminal sh -c ' .. vim.fn.shellescape(cmd))
   vim.cmd 'startinsert'
 end, {})
 
