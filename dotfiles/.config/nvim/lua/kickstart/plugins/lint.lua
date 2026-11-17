@@ -1,5 +1,7 @@
+if true then
+  return {}
+end
 return {
-
   { -- Linting
     'mfussenegger/nvim-lint',
     event = { 'BufReadPre', 'BufNewFile' },

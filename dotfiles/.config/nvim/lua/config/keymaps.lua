@@ -20,8 +20,13 @@ vim.cmd 'autocmd! TermOpen term://* lua set_terminal_keymaps()'
 vim.keymap.set('n', '<localleader>d', '<CMD>bd!<CR>', { desc = '[B]uffer [D]elete', silent = true, noremap = true })
 vim.keymap.set('n', '[b', '<CMD>bprev<CR>', { silent = true, noremap = true })
 vim.keymap.set('n', ']b', '<CMD>bnext<CR>', { silent = true, noremap = true })
+-- <C-z> instead of <tab> autosuggestions
+vim.keymap.set('n', '<localleader>b', ':b <C-z>', { desc = 'Find file' })
 
-vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+-- Quick file navigation
+vim.keymap.set('n', '-', '<CMD>Explore<CR>', { desc = 'Open file Explorer' })
+vim.keymap.set('n', '<localleader>ff', ':find <C-z>', { desc = 'Find file' })
+
 vim.keymap.set('n', '<localleader>w', '<CMD>w<CR>', { desc = 'Save file', silent = true, noremap = true })
 vim.keymap.set('n', '<localleader>r', function()
   local ft = vim.bo.filetype
@@ -90,12 +95,13 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+-- Better window navigation
+-- See `:help wincmd` for a list of all window commands
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move to left window' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move to bottom window' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move to top window' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move to right window' })
 -- aerial.nvim
 -- You probably also want to set a keymap to toggle aerial
 -- vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
-vim.keymap.del('n', 'gcc')
+-- vim.keymap.del('n', 'gcc')

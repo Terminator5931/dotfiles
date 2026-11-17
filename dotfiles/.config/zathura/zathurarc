@@ -8,6 +8,10 @@ set selection-clipboard clipboard
 # enable incremental search
 set incremental-search true
 
+set selection-notification false
+# set adjust-open width
+# set page-mode equal_width
+
 # zoom
 map <C-i> zoom in
 map <C-o> zoom out

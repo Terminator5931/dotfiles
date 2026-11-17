@@ -8,8 +8,10 @@ vim.opt.relativenumber = true
 vim.opt.hlsearch = true
 vim.opt.writebackup = false
 vim.opt.backup = false
+vim.opt.autochdir = false -- Don't auto change directory
+vim.opt.iskeyword:append '-' -- Treat dash as part of word
 -- vim.opt.showcmd = false
--- vim.opt.cmdheight = 0
+-- vim.opt.cmdheight = 1
 vim.opt.scrolloff = 12
 vim.opt.mouse = ''
 vim.opt.fillchars = { eob = ' ' }
@@ -20,15 +22,24 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.expandtab = true
 vim.opt.smarttab = true
-vim.opt.softtabstop = -1
+-- vim.opt.softtabstop = -1
+vim.opt.softtabstop = 2
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 
 vim.opt.wrap = true
 vim.opt.backspace = { 'start', 'eol', 'indent' }
+vim.opt.path:append '**' -- include subdirectories in search
 -- vim.opt.path:append { '**' }
-vim.opt.wildignore:append '*/node_modules/*'
+vim.opt.selection = 'exclusive' -- Selection behavior
+vim.opt.wildignore:append { '*/node_modules/*', '*.o', '*.obj', '*.pyc', '*.class', '*.jar' }
+--
+-- Command-line completion
+vim.opt.wildmenu = true
+vim.opt.wildmode = 'longest:full,full'
+vim.opt.wildoptions = 'pum' -- show matches in a popup menu
+
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.splitkeep = 'cursor'
@@ -44,7 +55,8 @@ vim.lsp.log.set_level(vim.log.levels.OFF)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
 vim.g.have_nerd_font = true
-vim.opt.showmode = false
+-- vim.opt.showmode = false -- Don't show mode in command line
+vim.opt.laststatus = 3
 vim.opt.undofile = false
 vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
@@ -64,6 +76,13 @@ vim.opt.foldlevel = 0
 
 vim.o.autoread = true
 
+-- NETRW
+-- Hide the top banner info
+vim.g.netrw_banner = 0
+-- -- Keep the current directory in sync with the browsing directory
+vim.g.netrw_keepdir = 0
+-- -- Open files in the previous window (keeps netrw behavior predictable)
+vim.g.netrw_browse_split = 4
 vim.opt.guicursor = ''
 -- vim.opt.guicursor = { 'n-v-c-sm-i-ci-ve-r-cr-o-t:block' }
 -- vim.ui.select = function(items, opts, on_choice)
